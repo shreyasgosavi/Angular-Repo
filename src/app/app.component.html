@@ -1,0 +1,39 @@
+<h2 [innerHTML]=title></h2>
+<p>Title is taken from the typescript with the help of <b>property-binding</b> : {{ title }}</p>
+
+<hr />
+
+<section id="two_way_binding">
+  <header>
+    <h3>Two-way binding</h3>
+  </header>
+  <label for="language">Language : </label>
+  <input id="language" type="text" [(ngModel)]="language" />
+  <p>The language value changes as we type in text box : {{ language }}</p>
+</section>
+
+<hr>
+
+<section id="template_ref_variables">
+  <header>
+    <h3 #tempRef>Template Reference Variable</h3>
+  </header>
+  <button (click)="catchElement(tempRef) ">Grab Header</button>
+</section>
+
+<hr>
+
+<section id="template_ref_variables">
+    <header>
+      <h3 >Ng-Class</h3>
+    </header>
+
+    <p [class.changeFont]="isStyled">The font of this para is going to change as per the condition from the code-behind.</p>
+    <p>Currently it is <span *ngIf="!isStyled">not</span> styled.</p>
+
+    <p>Click the button to apply/remove the style : <button (click)="alterStyle()" >Style</button> </p>    
+
+</section>
+<hr>
+
+<section></section>
