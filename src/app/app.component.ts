@@ -12,6 +12,7 @@ export class AppComponent {
   language: String = "Angular";
 
   isStyled: boolean = false;
+  inlineStyle: boolean = true;
 
   catchElement(element :any){
     console.log("Element is "+element);

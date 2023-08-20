@@ -1,5 +1,8 @@
-<h2 [innerHTML]=title></h2>
-<p>Title is taken from the typescript with the help of <b>property-binding</b> : {{ title }}</p>
+<h2 [innerHTML]="title"></h2>
+<p>
+  Title is taken from the typescript with the help of <b>property-binding</b> :
+  {{ title }}
+</p>
 
 <hr />
 
@@ -12,28 +15,43 @@
   <p>The language value changes as we type in text box : {{ language }}</p>
 </section>
 
-<hr>
+<hr />
 
 <section id="template_ref_variables">
   <header>
     <h3 #tempRef>Template Reference Variable</h3>
   </header>
-  <button (click)="catchElement(tempRef) ">Grab Header</button>
+  <button (click)="catchElement(tempRef)">Grab Header</button>
 </section>
 
-<hr>
+<hr />
 
 <section id="template_ref_variables">
-    <header>
-      <h3 >Ng-Class</h3>
-    </header>
+  <header>
+    <h3>Ng-Class</h3>
+  </header>
 
-    <p [class.changeFont]="isStyled">The font of this para is going to change as per the condition from the code-behind.</p>
-    <p>Currently it is <span *ngIf="!isStyled">not</span> styled.</p>
+  <p [class.changeFont]="isStyled">
+    The font of this para is going to change as per the condition from the
+    code-behind.
+  </p>
+  <p>Currently it is <span *ngIf="!isStyled">not</span> styled.</p>
 
-    <p>Click the button to apply/remove the style : <button (click)="alterStyle()" >Style</button> </p>    
-
+  <p>
+    Click the button to apply/remove the style :
+    <button (click)="alterStyle()">Style</button>
+  </p>
 </section>
-<hr>
+<hr />
 
-<section></section>
+<section id="ng_Style">
+  <header>
+    <h3>Ng-Style</h3>
+  </header>
+
+  <p>
+    Adding Inline-Style using
+    <span [style.backgroundColor]="inlineStyle ? 'yellow' : ''">ngStyle</span>
+    !!
+  </p>
+</section>
