@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 
+interface sport{
+  sportName: String,
+  players: number,
+  hours: number
+}
 
 @Component({
   selector: 'app-root',
@@ -26,5 +31,19 @@ export class AppComponent {
       this.isStyled=true;
     }
   }
+
+
+  sports: sport[]=[
+    {
+      sportName : 'Cricket' ,
+      players :  11,
+      hours :  7
+    },
+    {
+      sportName : 'Football' ,
+      players :  11,
+      hours :  2
+    }
+]
 
 }

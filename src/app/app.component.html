@@ -6,27 +6,27 @@
 
 <hr />
 
-<section id="two_way_binding">
+<article id="two_way_binding">
   <header>
     <h3>Two-way binding</h3>
   </header>
   <label for="language">Language : </label>
   <input id="language" type="text" [(ngModel)]="language" />
   <p>The language value changes as we type in text box : {{ language }}</p>
-</section>
+</article>
 
 <hr />
 
-<section id="template_ref_variables">
+<article id="template_ref_variables">
   <header>
     <h3 #tempRef>Template Reference Variable</h3>
   </header>
   <button (click)="catchElement(tempRef)">Grab Header</button>
-</section>
+</article>
 
 <hr />
 
-<section id="template_ref_variables">
+<article id="template_ref_variables">
   <header>
     <h3>Ng-Class</h3>
   </header>
@@ -41,10 +41,10 @@
     Click the button to apply/remove the style :
     <button (click)="alterStyle()">Style</button>
   </p>
-</section>
+</article>
 <hr />
 
-<section id="ng_Style">
+<article id="ng_Style">
   <header>
     <h3>Ng-Style</h3>
   </header>
@@ -54,4 +54,32 @@
     <span [style.backgroundColor]="inlineStyle ? 'yellow' : ''">ngStyle</span>
     !!
   </p>
-</section>
+</article>
+
+<article>
+  <header>
+    <h3>Ng-For</h3>
+  </header>
+
+  <p>Details about sports :</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Sr. No</th>
+        <th scope="col">Sport Name</th>
+        <th scope="col">No Of Players</th>
+        <th scope="col">Hours Played</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let sport of sports; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ sport.sportName }}</td>
+        <td>{{ sport.players }}</td>
+        <td>{{ sport.hours }}</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
