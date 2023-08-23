@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-dumb-component',
@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./dumb-component.component.css']
 })
 export class DumbComponentComponent {
+
+  @Input()
+  data !:String;
 
 }

@@ -12,6 +12,10 @@ import { DumbComponentComponent } from './dumb-component/dumb-component.componen
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    DumbComponentComponent,
+    SmartComponentComponent
   ]
 })
 export class SmartDumbComponentModule { }

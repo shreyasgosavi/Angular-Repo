@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class SmartComponentComponent {
 
+
+  valueToDisplay :String;
+
+  constructor(){
+    this.valueToDisplay = "Data is good"
+  }
+
 }
