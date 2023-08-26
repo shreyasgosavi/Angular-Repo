@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+
 
 @Component({
   selector: 'app-dumb-component',
@@ -10,4 +11,13 @@ export class DumbComponentComponent {
   @Input()
   data !:String;
 
+  @Output()
+  valueToSend : EventEmitter<String> = new EventEmitter();
+
+  value :String = "Default Value";
+
+  sendValue(){
+    console.log("HERE");
+    this.valueToSend.emit(this.value);
+  }
 }

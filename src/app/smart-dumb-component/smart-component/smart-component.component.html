@@ -1,2 +1,9 @@
+<article>
+  <header>
+    <h4>Smart Component</h4>
+  </header>
 
-<app-dumb-component [data]="valueToDisplay"></app-dumb-component>
+  <p>Hey value from child component : {{valueFromChlid}}</p>
+</article>
+
+<app-dumb-component [data]="valueToDisplay" (valueToSend)="takeValue($event)"> </app-dumb-component>

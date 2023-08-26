@@ -1,1 +1,11 @@
-<p>Data coming from smrt-component : {{data}}</p>
+<article>
+  <header>
+    <h4>Dumb Component !</h4>
+  </header>
+  <p>Data coming from smrt-component : {{ data }}</p>
+
+
+  <input type="text" [(ngModel)]="value">
+  <button (click)="sendValue()">Send Value</button>
+
+</article>
