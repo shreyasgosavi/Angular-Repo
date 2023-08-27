@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { SampleModuleModule } from './sample-module/sample-module.module';
 import { SmartDumbComponentModule } from './smart-dumb-component/smart-dumb-component.module';
+import { DataServiceService } from './services/data-service.service';
+
 
 
 @NgModule({
@@ -19,7 +21,7 @@ import { SmartDumbComponentModule } from './smart-dumb-component/smart-dumb-comp
     SampleModuleModule,
     SmartDumbComponentModule
   ],
-  providers: [],
+  providers: [DataServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

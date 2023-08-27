@@ -1,23 +1,27 @@
-import { Component } from '@angular/core';
-
-interface sport{
-  sportName: String,
-  players: number,
-  hours: number
-}
+import { Component, OnInit } from '@angular/core';
+import { sport } from './models/SportModel';
+import { DataServiceService } from './services/data-service.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'angular-proj1';
+export class AppComponent implements OnInit {
 
+  title = 'angular-proj1';
   language: String = "Angular";
+  sports !: sport[];
 
   isStyled: boolean = false;
   inlineStyle: boolean = true;
+
+  constructor(private dataService : DataServiceService ){
+    
+  }
+  ngOnInit(): void {
+    this.sports = this.dataService.getSportDetails();
+  }
 
   catchElement(element :any){
     console.log("Element is "+element);
@@ -32,18 +36,8 @@ export class AppComponent {
     }
   }
 
+  
 
-  sports: sport[]=[
-    {
-      sportName : 'Cricket' ,
-      players :  11,
-      hours :  7
-    },
-    {
-      sportName : 'Football' ,
-      players :  11,
-      hours :  2
-    }
-]
+
 
 }
