@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { SampleModuleModule } from './sample-module/sample-module.module';
 import { SmartDumbComponentModule } from './smart-dumb-component/smart-dumb-component.module';
 import { DataServiceService } from './services/data-service.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -19,7 +20,8 @@ import { DataServiceService } from './services/data-service.service';
     AppRoutingModule,
     FormsModule,
     SampleModuleModule,
-    SmartDumbComponentModule
+    SmartDumbComponentModule,
+    HttpClientModule
   ],
   providers: [DataServiceService],
   bootstrap: [AppComponent]

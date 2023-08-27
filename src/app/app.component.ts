@@ -20,7 +20,9 @@ export class AppComponent implements OnInit {
     
   }
   ngOnInit(): void {
-    this.sports = this.dataService.getSportDetails();
+    this.dataService.getSportDetails().subscribe( (data: sport[]) => {
+      this.sports = data;
+    } );
   }
 
   catchElement(element :any){

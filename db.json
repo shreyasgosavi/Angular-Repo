@@ -1,0 +1,14 @@
+{
+    "sport": [
+        {
+            "sportName": "Cricket",
+            "players": 11,
+            "hours": 7
+        },
+        {
+            "sportName": "Football",
+            "players": 11,
+            "hours": 2
+        }
+    ]
+}
