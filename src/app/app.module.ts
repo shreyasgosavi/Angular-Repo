@@ -8,12 +8,14 @@ import { SampleModuleModule } from './sample-module/sample-module.module';
 import { SmartDumbComponentModule } from './smart-dumb-component/smart-dumb-component.module';
 import { DataServiceService } from './services/data-service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { TemplateFormComponent } from './template-form/template-form.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TemplateFormComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     SampleModuleModule,
     SmartDumbComponentModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [DataServiceService],
   bootstrap: [AppComponent]

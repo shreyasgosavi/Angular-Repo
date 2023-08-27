@@ -1,0 +1,29 @@
+<article>
+<section>
+    <h3>Ng-Form Demonstration : </h3>
+    <form #sampleForm="ngForm">
+        <table>
+        <tr>
+        <td><label for="name">Name : </label></td>
+        <td><input type="text" name="name" id="name" [(ngModel)]="sports[0].sportName"></td><br>
+        </tr>
+
+        <tr>
+        <td><label for="players">On-Field Players : </label></td>
+        <td><input type="text" name="players" id="players" [(ngModel)]="sports[0].players"></td><br>
+        </tr>
+
+        <tr>
+        <td><label for="play-hours">Hours : </label></td>
+        <td><input type="text" name="playHours" id="playHours" [(ngModel)]="sports[0].hours"></td><br>
+        </tr>
+        </table>
+        <!-- players: number;
+    hours: number; -->
+
+    </form>
+</section>
+<p>Form Data : {{sampleForm.value | json}}</p>
+
+</article>
+
