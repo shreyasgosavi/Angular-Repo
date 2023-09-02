@@ -1,18 +1,24 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { WeatherStatsComponent } from './weather-stats/weather-stats.component';
+import { FormValidationsComponent } from './form-validations/form-validations.component';
 
 
 
 @NgModule({
   declarations: [
-    WeatherStatsComponent
+    WeatherStatsComponent,
+    FormValidationsComponent,
+    
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [
-    WeatherStatsComponent
+    WeatherStatsComponent,
+    FormValidationsComponent
   ]
 })
 export class SampleModuleModule { }

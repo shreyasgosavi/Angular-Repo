@@ -16,7 +16,7 @@ import { TemplateFormComponent } from './template-form/template-form.component';
   declarations: [
     AppComponent,
     TemplateFormComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
