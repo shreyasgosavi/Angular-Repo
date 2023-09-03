@@ -3,17 +3,23 @@
 </header>
 
 <section>
-    <form ngForm="" method="post">
+    <form #goodThings="ngForm" method="post">
 
         <label >Like to learn cool things?</label><br>
-        <input type="radio" name="cool-stuff" id="yes"><label for="yes">YES</label>
+        <input type="radio" name="cool-stuff"  id="yes"><label for="yes">YES</label>
         <input type="radio" name="cool-stuff" id="no"><label for="no">NO</label>
         <br>
 
         <label for="thoughts">Your Thoughts On Constant Change In Life : </label><br>
-        <input type="text" name="thoughts" id="thoughts"><br>
+        <input type="text" name="thoughts"  id="thoughts"><br>
 
         <input type="submit" value="SUBMIT">
-
     </form>
+
+    <p>Form Details :</p>
+    <p>IS the  form-changed : {{goodThings.pristine}}</p>
+    <p>Touched the form : {{goodThings.touched}}</p>
+    <p>Radio-button label </p>
+
+
 </section>

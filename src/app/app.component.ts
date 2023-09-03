@@ -16,6 +16,8 @@ export class AppComponent implements OnInit {
   isStyled: boolean = false;
   inlineStyle: boolean = true;
 
+  linkString :String ="form";
+
   constructor(private dataService : DataServiceService ){
     
   }

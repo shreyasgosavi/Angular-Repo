@@ -6,4 +6,10 @@
   <p>Hey value from child component : {{valueFromChlid}}</p>
 </article>
 
-<app-dumb-component [data]="valueToDisplay" (valueToSend)="takeValue($event)"> </app-dumb-component>
+<app-dumb-component [data]="valueToDisplay" (valueToSend)="takeValue($event)"> 
+
+  <p>--------------------------------------------------------------------------------</p>
+  <i>This HTML is passed from Smart-Compoent and is displayed in Child component with the help of content-projection.</i>
+  <p>--------------------------------------------------------------------------------</p>
+
+</app-dumb-component>
