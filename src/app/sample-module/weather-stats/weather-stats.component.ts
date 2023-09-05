@@ -1,11 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-weather-stats',
   templateUrl: './weather-stats.component.html',
   styleUrls: ['./weather-stats.component.css']
 })
-export class WeatherStatsComponent implements OnInit{
+export class WeatherStatsComponent implements OnInit, AfterViewInit{
+
+
+  @ViewChild("weatherPara") weatherPara = ElementRef;
 
   dayScore : Number;
 
@@ -31,6 +34,11 @@ export class WeatherStatsComponent implements OnInit{
 
     this.dayScore = 1;
     
+  }
+  ngAfterViewInit(): void {
+    
+    console.log("Element of DOM using Angular "+this.weatherPara);
+
   }
 
 

@@ -101,9 +101,16 @@
 
 <hr>
 <app-form-validations></app-form-validations>
-<router-outlet></router-outlet>
 
-<a routerLink="linkString">Form Link</a>
+<router-outlet>
+
+  <em>--------------------------------------------------------------------------------</em>
+  This is the content of Router-Outlet whose content will be visible after clicking the below link
+  <em>--------------------------------------------------------------------------------</em>
+  
+
+</router-outlet>
+<a routerLink="{{linkString}}">Form Link</a>
 
 
 
